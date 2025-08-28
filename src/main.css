@@ -1,0 +1,125 @@
+/* Reset some default styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Make images and videos responsive */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Responsive typography */
+h1, h2, h3, h4, h5, h6 {
+  word-break: break-word;
+}
+
+/* Example media queries for responsiveness */
+@media (max-width: 900px) {
+  .container {
+    width: 98%;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+    padding: 0 5px;
+  }
+  body {
+    font-size: 16px;
+  }
+}
+
+/* Welcome page specific styles */
+.welcome-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 26px;
+  padding: clamp(18px, 2.4vw, 28px);
+  background: rgba(255,255,255,0.10);
+  align-items: center;
+}
+
+.welcome-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+}
+
+.row {
+  margin-top: 12px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.welcome-right {
+  display: grid;
+  place-items: center;
+}
+
+.profile-box {
+  width: min(360px, 70vw);
+  aspect-ratio: 1 / 1;
+  display: grid;
+  place-items: center;
+  background: rgba(255,255,255,0.10);
+  border-radius: 28px;
+  padding: 12px;
+}
+
+/* Buttons: small, consistent touch targets */
+.btn4D {
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn4D.btnGhost {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.18);
+}
+
+/* Responsive breakpoints */
+@media (max-width: 900px) {
+  .welcome-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .profile-box {
+    width: min(300px, 60vw);
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-grid {
+    padding: 14px;
+    gap: 12px;
+  }
+  .heading {
+    font-size: clamp(24px, 6vw, 34px) !important;
+  }
+  .profile-box {
+    width: min(220px, 70vw);
+    border-radius: 18px;
+    padding: 8px;
+  }
+  .btn4D {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+}
